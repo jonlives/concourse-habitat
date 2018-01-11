@@ -1,3 +1,4 @@
+#@IgnoreInspection BashAddShebang
 pkg_name=concourse
 pkg_origin=jonlives
 pkg_version="3.6.0"
@@ -31,5 +32,5 @@ do_install(){
   ssh-keygen -t rsa -f /tsa_host_key -N ''
   ssh-keygen -t rsa -f /worker_key -N ''
   ssh-keygen -t rsa -f /session_signing_key -N ''
-  cp ${pkg_prefix}/worker_key.pub ${pkg_prefix}/authorized_worker_keys
+  cp /worker_key.pub /authorized_worker_keys
 }
