@@ -1,0 +1,7 @@
+concourse web \
+  --basic-auth-username myuser \
+  --basic-auth-password mypass \
+  --session-signing-key /hab/session_signing_key \
+  --tsa-host-key /hab/tsa_host_key \
+  --tsa-authorized-keys /hab/authorized_worker_keys \
+  --external-url http://my-ci.example.com
